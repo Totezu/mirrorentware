@@ -35,9 +35,9 @@ done
 
 echo 'Info: Opkg package manager deployment...'
 URL=https://raw.githubusercontent.com/Totezu/mirrorentware/main
-wget $URL/opkg -O /opt/bin/opkg
+wget --no-check-certificate $URL/opkg -O /opt/bin/opkg
 chmod 755 /opt/bin/opkg
-wget $URL/opkg.conf -O /opt/etc/opkg.conf
+wget --no-check-certificate $URL/opkg.conf -O /opt/etc/opkg.conf
 
 echo 'Info: Basic packages installation...'
 /opt/bin/opkg update
